@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        dev {
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-dev"
+            buildConfigField("String", "API_BASE_URL", rootProject.ext.endpoints.development_endpoint)
+
+            vectorDrawables.generatedDensities = rootProject.ext.android.generatedDensitiesDev
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.0.1'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    // Architecture components
+    implementation rootProject.ext.commonDependencies.lifecycleExtensions
+    kapt rootProject.ext.commonDependencies.lifecycleCompiler
+
+    // Android
+    implementation rootProject.ext.commonDependencies.appcompat
+    implementation rootProject.ext.commonDependencies.constraintlayout
+    implementation rootProject.ext.commonDependencies.recyclerview
+
+    // Moshi
+    implementation rootProject.ext.commonDependencies.moshi
+    kapt rootProject.ext.commonDependencies.moshiCodegen
+
+    // OkHttp
+    implementation rootProject.ext.commonDependencies.okHttp
+    implementation rootProject.ext.commonDependencies.okHttpInterceptor
+
+    // Retrofit
+    implementation rootProject.ext.commonDependencies.retrofit2
+    implementation rootProject.ext.commonDependencies.retrofitRxAdapter
+    implementation rootProject.ext.commonDependencies.retrofitConverterMoshi
+
+    // RxJava 2
+    implementation rootProject.ext.commonDependencies.rxJava2
+
+    // Koin
+    implementation rootProject.ext.commonDependencies.koinAndroid
+    implementation rootProject.ext.commonDependencies.koinAndroidXScope
+    implementation rootProject.ext.commonDependencies.koinAndroidXViewModel
+
+    // Timber
+    implementation rootProject.ext.developmentDependencies.timber
+}

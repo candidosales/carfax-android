@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CARFAX</string>
+
+    <!-- loading start -->
+    <string name="loading_cars">Loading cars ...</string>
+    <!-- loading end -->
+</resources>

@@ -1,0 +1,24 @@
+ext {
+
+    // Warning, minSdkVersionDev disable the lint during development
+    // Always use the support library when working with android APIs
+    // Variables below not indented are used for easily change from shell script
+
+    android = [
+            applicationId         : "com.carfax.application",
+            applicationName       : "CarfaxTest",
+            compileSdkVersion     : 28,
+            generatedDensities    : ["mdpi", "hdpi", "xhdpi"],
+            generatedDensitiesDev : ["xhdpi"],
+            minSdkVersion         : 19,
+            resConfigs            : ["en", "pt-BR"],
+            targetSdkVersion      : 28,
+            versionCode           : 1,
+            versionName           : "1.0.0",
+    ]
+
+    endpoints = [
+            development_endpoint : "\"http://api.jsonbin.io/b/\"",
+            production_endpoint  : "\"http://api.jsonbin.io/b/\"",
+    ]
+}
