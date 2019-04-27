@@ -6,6 +6,7 @@ import java.math.BigDecimal
 
 @Parcelize
 data class Car (
+    val id: String,
     val photo: String,
     val dealer: Dealer?,
     val price: BigDecimal,

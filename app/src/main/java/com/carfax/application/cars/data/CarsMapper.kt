@@ -20,6 +20,7 @@ class CarsMapper : BaseMapper<CarsResponseRaw, List<Car>>() {
         } else {
             raw.listings.map { car ->
                 Car(
+                    id = car.id ?: String.empty(),
                     photo = car.images?.firstPhoto?.large ?: String.empty(),
                     price = car.price.toBigDecimal() ?: BigDecimal.ZERO,
                     year = car.year ?: 0,

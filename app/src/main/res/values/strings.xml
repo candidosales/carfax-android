@@ -9,4 +9,16 @@
     <string name="car_mileage">"{{carMileage}}k mi"</string>
     <string name="button_call_dealer">Call dealer</string>
     <!-- item car -->
+
+    <!-- about car -->
+    <string name="vehicle_info">Vehicle info</string>
+    <string name="location">Location</string>
+    <string name="exterior_color">Exterior color</string>
+    <string name="interior_color">Interior color</string>
+    <string name="drive_type">Drive type</string>
+    <string name="transmission">Transmission</string>
+    <string name="body_style">Body style</string>
+    <string name="engine">Engine</string>
+    <string name="fuel">Fuel</string>
+    <!-- about car -->
 </resources>

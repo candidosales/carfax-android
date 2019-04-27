@@ -4,6 +4,7 @@ import com.carfax.application.cars.model.Dealer
 import com.squareup.moshi.Json
 
 data class CarResponse(
+    @Json(name = "id") val id: String,
     @Json(name = "images") val images: CarImagesResponse,
     @Json(name = "year")val year: Int,
     @Json(name = "make")val make: String,

@@ -81,8 +81,11 @@ dependencies {
 
     // Glide
     implementation rootProject.ext.commonDependencies.glide
-//    kapt rootProject.ext.commonDependencies.glideAnnotation
 
     // Timber
     implementation rootProject.ext.developmentDependencies.timber
+
+    // Room
+    implementation rootProject.ext.commonDependencies.room
+    kapt rootProject.ext.commonDependencies.roomCompiler
 }

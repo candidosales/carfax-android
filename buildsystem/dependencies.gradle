@@ -7,6 +7,7 @@ ext {
     lifecycleCompiler   = '2.0.0'
     lifecycleExtensions = '2.0.0'
     recyclerview        = '1.1.0-alpha04'
+    room                = '1.1.1'
 
     // Material libraries
     material = '1.0.0'
@@ -65,6 +66,9 @@ ext {
             retrofit2                       : "com.squareup.retrofit2:retrofit:${retrofit2}",
             retrofitRxAdapter               : "com.squareup.retrofit2:adapter-rxjava2:${retrofit2}",
             retrofitConverterMoshi          : "com.squareup.retrofit2:converter-moshi:${retrofit2}",
+
+            room                            : "android.arch.persistence.room:runtime:${room}",
+            roomCompiler                    : "android.arch.persistence.room:compiler:${room}",
 
             rxJava2                         : "io.reactivex.rxjava2:rxjava:${rxJava2}",
     ]
