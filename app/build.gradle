@@ -21,6 +21,11 @@ android {
         }
     }
 
+    // ADD this to use Parcelize, etc.
+    androidExtensions {
+        experimental = true
+    }
+
     flavorDimensions "default"
 
     productFlavors {
@@ -51,6 +56,7 @@ dependencies {
     implementation rootProject.ext.commonDependencies.appcompat
     implementation rootProject.ext.commonDependencies.constraintlayout
     implementation rootProject.ext.commonDependencies.recyclerview
+    implementation rootProject.ext.commonDependencies.cardview
 
     // Moshi
     implementation rootProject.ext.commonDependencies.moshi
@@ -72,6 +78,10 @@ dependencies {
     implementation rootProject.ext.commonDependencies.koinAndroid
     implementation rootProject.ext.commonDependencies.koinAndroidXScope
     implementation rootProject.ext.commonDependencies.koinAndroidXViewModel
+
+    // Glide
+    implementation rootProject.ext.commonDependencies.glide
+//    kapt rootProject.ext.commonDependencies.glideAnnotation
 
     // Timber
     implementation rootProject.ext.developmentDependencies.timber

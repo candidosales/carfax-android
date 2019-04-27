@@ -9,7 +9,8 @@
     </style>
 
     <style name="AppTheme.ToolbarStyle" parent="Base.Widget.AppCompat.Toolbar">
-        <item name="android:textColorPrimary">@color/colorText</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorPrimary">@color/colorWhite</item>
         <item name="android:background">@color/colorAccent</item>
     </style>
 

@@ -1,15 +1,15 @@
 package com.carfax.application.cars.model.response
 
 import com.carfax.application.cars.model.Dealer
-import java.math.BigDecimal
+import com.squareup.moshi.Json
 
 data class CarResponse(
-    val images: CarImagesResponse,
-    val year: Int,
-    val make: String,
-    val model: String,
-    val trim: String,
-    val price: BigDecimal,
-    val mileage: Int,
-    val dealer: Dealer
+    @Json(name = "images") val images: CarImagesResponse,
+    @Json(name = "year")val year: Int,
+    @Json(name = "make")val make: String,
+    @Json(name = "model")val model: String,
+    @Json(name = "trim")val trim: String,
+    @Json(name = "price")val price: Float,
+    @Json(name = "mileage")val mileage: Int,
+    @Json(name = "dealer") val dealer: Dealer
 )

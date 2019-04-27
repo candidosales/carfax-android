@@ -2,9 +2,8 @@ ext {
 
     // AndroidX libraries
     appcompat           = '1.0.2'
-//    cardview            = '1.0.0'
+    cardview            = '1.0.0'
     constraintlayout    = '1.1.3'
-    legacySupportV13    = '1.0.0'
     lifecycleCompiler   = '2.0.0'
     lifecycleExtensions = '2.0.0'
     recyclerview        = '1.1.0-alpha04'
@@ -13,7 +12,7 @@ ext {
     material = '1.0.0'
 
     // Third party libraries
-    glide         = '4.7.1'
+    glide         = '4.9.0'
     moshi         = '1.8.0'
     okHttp        = '3.10.0'
     retrofit2     = '2.5.0'
@@ -36,12 +35,9 @@ ext {
 
             applicationProject              : project(':app'),
 
-//            cardview                        : "androidx.cardview:cardview:${cardview}",
+            cardview                        : "androidx.cardview:cardview:${cardview}",
 
             constraintlayout                : "androidx.constraintlayout:constraintlayout:${constraintlayout}",
-
-//            dagger2                         : "com.google.dagger:dagger:${dagger2}",
-//            dagger2Compiler                 : "com.google.dagger:dagger-compiler:${dagger2}",
 
             glide                           : "com.github.bumptech.glide:glide:${glide}",
 
@@ -51,7 +47,7 @@ ext {
             koinAndroidXScope               : "org.koin:koin-androidx-scope:${koin}",
             koinAndroidXViewModel           : "org.koin:koin-androidx-viewmodel:${koin}",
 
-            legacySupportV13                : "androidx.legacy:legacy-support-v13:${legacySupportV13}",
+//            legacySupportV13                : "androidx.legacy:legacy-support-v13:${legacySupportV13}",
 
             lifecycleCompiler               : "androidx.lifecycle:lifecycle-compiler:${lifecycleCompiler}",
             lifecycleExtensions             : "androidx.lifecycle:lifecycle-extensions:${lifecycleExtensions}",

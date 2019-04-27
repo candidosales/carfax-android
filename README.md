@@ -9,7 +9,6 @@ The architecture adopted to this project was MVVM, Architecture Components and C
 
 * [Kotlin](https://kotlinlang.org/)
 * [Android Architecture Components](https://developer.android.com/topic/libraries/architecture/index.html)
-* Android Support Libraries
 * [RxJava2](https://kotlinlang.org/docs/reference/coroutines-overview.html)
 * [Koin](https://github.com/InsertKoinIO/koin)
 * [Glide](https://github.com/bumptech/glide)

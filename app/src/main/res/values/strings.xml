@@ -4,4 +4,9 @@
     <!-- loading start -->
     <string name="loading_cars">Loading cars ...</string>
     <!-- loading end -->
+
+    <!-- item car -->
+    <string name="car_mileage">"{{carMileage}}k mi"</string>
+    <string name="button_call_dealer">Call dealer</string>
+    <!-- item car -->
 </resources>

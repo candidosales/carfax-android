@@ -11,14 +11,14 @@ ext {
             generatedDensities    : ["mdpi", "hdpi", "xhdpi"],
             generatedDensitiesDev : ["xhdpi"],
             minSdkVersion         : 19,
-            resConfigs            : ["en", "pt-BR"],
+            resConfigs            : ["en"],
             targetSdkVersion      : 28,
             versionCode           : 1,
             versionName           : "1.0.0",
     ]
 
     endpoints = [
-            development_endpoint : "\"http://api.jsonbin.io/b/\"",
-            production_endpoint  : "\"http://api.jsonbin.io/b/\"",
+            development_endpoint : "\"https://carfax-for-consumers.firebaseio.com/\"",
+            production_endpoint  : "\"https://carfax-for-consumers.firebaseio.com/\"",
     ]
 }

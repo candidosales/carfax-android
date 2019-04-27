@@ -20,13 +20,14 @@ class CarsMapper : BaseMapper<CarsResponseRaw, List<Car>>() {
         } else {
             raw.listings.map { car ->
                 Car(
-                    photo = car.images.firstPhoto.large ?: String.empty(),
-                    price = car.price ?: BigDecimal.ZERO,
+                    photo = car.images?.firstPhoto?.large ?: String.empty(),
+                    price = car.price.toBigDecimal() ?: BigDecimal.ZERO,
                     year = car.year ?: 0,
                     make = car.make ?: String.empty(),
                     dealer = car.dealer ?: Dealer(),
                     model = car.model ?: String.empty(),
-                    trim = car.model ?: String.empty()
+                    trim = car.model ?: String.empty(),
+                    mileage = car.mileage ?: 0
                 )
             }
         }

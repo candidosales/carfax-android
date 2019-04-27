@@ -10,11 +10,12 @@ import com.carfax.application.cars.data.CarsRepository
 import com.carfax.application.cars.model.Car
 
 class CarsViewModel constructor(
-    private val carsRepository: CarsRepository
-) : BaseViewModel() {
+    private val carsRepository: CarsRepository,
+    private val carViewMapper: CarViewMapper
+    ) : BaseViewModel() {
 
-    private val _cars = MutableLiveData<ViewActionState<List<Car>>>()
-    val cars: LiveData<ViewActionState<List<Car>>>
+    private val _cars = MutableLiveData<ViewActionState<List<CarView>>>()
+    val cars: LiveData<ViewActionState<List<CarView>>>
         get() = _cars
 
 
@@ -23,6 +24,7 @@ class CarsViewModel constructor(
         carsRepository
             .getCars()
             .observeOnComputation()
+            .map(carViewMapper)
             .subscribe({ result ->
                 _cars.postValue(ViewActionState.complete(result))
             }, { ex ->
