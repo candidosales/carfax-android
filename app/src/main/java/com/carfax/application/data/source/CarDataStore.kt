@@ -10,13 +10,13 @@ import io.reactivex.Single
  * This is to be implemented by external data source layers, setting the requirements for the
  * operations that need to be implemented
  */
-interface DataStore {
+interface CarDataStore {
 
     fun clear(): Completable
 
-    fun save(bufferoos: List<Car>): Completable
+    fun save(cars: List<Car>): Completable
 
-    fun get(): Flowable<List<Car>>
+    fun getCars(): Flowable<List<Car>>
 
     fun isCached(): Single<Boolean>
 

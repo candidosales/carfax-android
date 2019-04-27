@@ -11,7 +11,7 @@ data class CachedCar(
     @PrimaryKey
     var id: String,
     val photo: String,
-    val price: BigDecimal,
+    val price: Double,
     val year: Int,
     val make: String,
     val model: String,

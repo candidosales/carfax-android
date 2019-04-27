@@ -18,6 +18,8 @@ ext {
     okHttp        = '3.10.0'
     retrofit2     = '2.5.0'
     rxJava2       = '2.2.8'
+    rxKotlin      = '2.1.0'
+    rxAndroid     = '2.0.1'
 
     // Dependency Injection
     koin          = '2.0.0-rc-2'
@@ -30,6 +32,11 @@ ext {
 
     // Log
     timber = '4.7.1'
+
+    // Debug database
+
+    debugDb  = '1.0.6'
+
 
     commonDependencies = [
             appcompat                       : "androidx.appcompat:appcompat:${appcompat}",
@@ -71,6 +78,8 @@ ext {
             roomCompiler                    : "android.arch.persistence.room:compiler:${room}",
 
             rxJava2                         : "io.reactivex.rxjava2:rxjava:${rxJava2}",
+            rxKotlin                        : "io.reactivex.rxjava2:rxkotlin:${rxKotlin}",
+            rxAndroid                       : "io.reactivex.rxjava2:rxandroid:${rxAndroid}",
     ]
 
     developmentDependencies = [
@@ -85,5 +94,7 @@ ext {
             stethoOkHttp  : "com.facebook.stetho:stetho-okhttp3:${stetho}",
 
             timber        : "com.jakewharton.timber:timber:${timber}",
+
+            debugDb       : "com.amitshekhar.android:debug-db:${debugDb}"
     ]
 }

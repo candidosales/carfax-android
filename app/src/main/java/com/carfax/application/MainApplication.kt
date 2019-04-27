@@ -2,6 +2,7 @@ package com.carfax.application
 
 import android.app.Application
 import com.carfax.application.di.appModule
+import com.carfax.application.di.carsModule
 import com.carfax.application.di.networkModule
 import com.carfax.application.di.utilsModule
 import org.koin.android.ext.koin.androidContext
@@ -16,7 +17,7 @@ open class MainApplication : Application() {
 
         startKoin {
             androidContext(this@MainApplication)
-            modules(appModule, networkModule, utilsModule)
+            modules(appModule, networkModule, utilsModule, carsModule)
         }
 
     }

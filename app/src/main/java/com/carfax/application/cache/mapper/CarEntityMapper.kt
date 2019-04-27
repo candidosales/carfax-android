@@ -17,7 +17,7 @@ open class CarEntityMapper :
         return CachedCar(
             type.id,
             type.photo,
-            type.price,
+            type.price.toDouble(),
             type.year,
             type.make,
             type.model,
@@ -30,16 +30,7 @@ open class CarEntityMapper :
      * Map a [CachedBufferoo] instance to a [Bufferoo] instance
      */
     override fun mapFromCached(type: CachedCar): Car {
-        return Car(type.id, type.photo, null, type.price, type.year, type.make, type.model, type.trim, type.mileage)
+        return Car(type.id, type.photo, null, type.price.toBigDecimal(), type.year, type.make, type.model, type.trim, type.mileage)
     }
 
 }
-
-//var id: Long,
-//val photo: String,
-//val price: BigDecimal,
-//val year: Int,
-//val make: String,
-//val model: String,
-//val trim: String,
-//val mileage: Int

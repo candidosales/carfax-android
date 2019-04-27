@@ -3,16 +3,16 @@ package com.carfax.application.cache
 import com.carfax.application.cache.db.CarfaxDatabase
 import com.carfax.application.cache.mapper.CarEntityMapper
 import com.carfax.application.cars.model.Car
-import com.carfax.application.data.source.DataStore
+import com.carfax.application.data.source.CarDataStore
 import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Single
 
-class CarfaxCacheImpl(
-    val carfaxDatabase: CarfaxDatabase,
+class CarCacheImpl(
+    private val carfaxDatabase: CarfaxDatabase,
     private val entityMapper: CarEntityMapper,
     private val preferencesHelper: PreferencesHelper
-): DataStore {
+): CarDataStore {
 
     private val EXPIRATION_TIME = (60 * 10 * 1000).toLong()
 
@@ -48,7 +48,7 @@ class CarfaxCacheImpl(
     /**
      * Retrieve a list of [Car] instances from the database.
      */
-    override fun get(): Flowable<List<Car>> {
+    override fun getCars(): Flowable<List<Car>> {
         return Flowable.defer {
             Flowable.just(carfaxDatabase.cachedCarDao().getAll())
         }.map {

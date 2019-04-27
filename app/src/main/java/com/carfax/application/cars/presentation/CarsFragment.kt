@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.carfax.application.R
 import com.carfax.application.base.presentation.BaseFragment
 import com.carfax.application.base.presentation.ViewActionState
-import com.carfax.application.cars.model.Car
 import kotlinx.android.synthetic.main.fragment_cars.*
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
